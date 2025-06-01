@@ -1,11 +1,11 @@
 package dev.vikas.productservices.dtos;
 
-import lombok.Data;
+
 import lombok.Getter;
 import lombok.Setter;
 
-
-@Data
+@Getter
+@Setter
 public class FakeStoreProductDto {
     private long id;
     private String title;
@@ -13,5 +13,4 @@ public class FakeStoreProductDto {
     private String image;
     private String description;
     private String category;
-
-};
+}

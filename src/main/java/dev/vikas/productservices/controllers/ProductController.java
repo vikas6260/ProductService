@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/products")
 public class ProductController {
@@ -17,6 +19,12 @@ public class ProductController {
     @GetMapping("/{id}")
     public Product getSingleProduct(@PathVariable( "id" ) long product_id ) {
         return fakeStoreProductService.getSingleProducts(product_id);
+    }
+
+
+    @GetMapping("/")
+    public List<Product> getAllProducts() {
+            return fakeStoreProductService.getProducts();
     }
 
 }
